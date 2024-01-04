@@ -1,0 +1,218 @@
+.menu {
+    display: flex;
+    list-style-type: none;
+    margin: 30px;
+    font-size: 25px;
+}
+#zx{
+    background-color: black;
+    color: white;
+} 
+.ride {
+    border-radius: 6px 6px 6px 6px;
+    margin-bottom: 30px;
+    margin-right: 100px;
+}
+
+.jae {
+    font-size: 50px;
+}
+
+#ar {
+    color: white;
+}
+#jn{
+    margin-right: 100px;
+}
+
+li {
+    margin: 20px;
+}
+
+.small {
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.main {
+    background-color: black;
+    color: white;
+}
+
+button {
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 0px;
+    border: none;
+}
+
+
+input {
+    border-radius: 5px 5px 5px 5px;
+    height: 50px;
+    font-size: 12px;
+    border: none;
+    width: 150%;
+}
+
+.cx{
+    width: 70%;
+}
+
+.wr {
+    font-size: 70px;
+    color: white;
+}
+
+.pd {
+    font-size: 15px;
+    color: white;
+}
+
+.oga {
+    display: flex;
+    margin-left: 450px;
+}
+
+.wol {
+    display: flex;
+}
+
+.container {
+    margin-top: 70px;
+}
+
+.col-4 {
+    margin-top: 50px;
+}
+
+.gol {
+    background-color: black;
+    color: white;
+}
+.all{
+    background-color: #F6F6F6;
+}
+
+/*3rd line*/
+.val {
+    background-color: black;
+    color: white;
+    border: none;
+    
+}
+
+#val {
+    margin-top: 5%;
+}
+
+#bol {
+    margin-top: 70px;
+}
+
+#hf {
+    font-size: 50px;
+}
+
+/*4th line*/
+.general {
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    margin-top: 20px;
+}
+
+.sec {
+    display: flex;
+    margin-left: 200px;
+    margin-top: 50px;
+}
+
+#hs {
+    margin-left: 200px;
+    margin-top: 30px;
+}
+
+.dude {
+    margin-top: 50px;
+    margin: 30px;
+    justify-content: space-between;
+}
+#ajax{
+    border: none ;
+    padding: 30px;
+    width: 700%;
+  
+}
+
+#tal{
+    border: none;
+    margin: 30px;
+    background-color:white;
+    padding-top: 25px;
+}
+#any{
+    border-radius: 80px;
+    background-color: white;
+    font-size: 50px;
+    margin-left: 1250px;
+    position: sticky;
+    bottom: 10rem;
+}
+
+/*5th line*/
+.un {
+    display: flex;
+    margin: 100px;
+}
+
+.hey {
+    margin-left: 100px;
+    top: 100px;
+}
+
+.boos {
+    background-color: black;
+    color: white;
+    margin-top: 0px;
+    padding: 100px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.can {
+    top: 100px;
+}
+.pap{
+    margin-left: 10px;
+    font-size: 20px;
+    padding: 40px;
+    justify-content: space-between;
+    display: flex;
+}
+i{
+    margin: 30px;
+}
+.mon{
+    width: 100px;
+}
+.xol{
+    margin-left: 100px;
+}
+.bol{
+    margin-left: 100px;
+}
+.jek{
+    margin-left: 5px;
+}
+#jil{
+    width:75px;
+}

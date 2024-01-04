@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+<style>
+  #ted {
+    background-size: cover;
+    height: 100vh;
+    width: 42%;
+  }
+
+  #trf {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 250px;
+  }
+
+  .fir {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  input {
+    width: 100%;
+    border-radius: 5px 5px 5px 5px;
+    height: 7vh;
+  }
+
+  button {
+    width: 100%;
+    border-radius: 5px 5px 5px 5px;
+    height: 7vh;
+    border: none;
+  }
+
+  #gol {
+    margin-left: 30%;
+  }
+
+  #blu {
+    color: blue;
+  }
+
+  #ov {
+    display: none;
+  }
+
+  #doub {
+    width: 60px;
+    position: fixed;
+    bottom: 40px;
+    right: 10px;
+  }
+
+  #pag {
+    margin-left: 40%;
+  }
+
+  @media screen and (max-width:768px) {
+    #ted {
+      display: none;
+    }
+
+    #form {
+      text-align: center;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    #ov {
+      display: block;
+      margin-top: 20%;
+      margin-left: 10%;
+    }
+
+    #trf {
+      width: 100% !important;
+      margin: 0px auto;
+      margin-top: 30%;
+      padding: 0px;
+    }
+
+    input {
+      width: 80%;
+      margin: 0px auto;
+    }
+
+    button {
+      width: 80%;
+      margin: 0px auto;
+    }
+
+    label {
+      margin-left: 10%;
+    }
+
+    #rf {
+      margin-left: 10%;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    #gol {
+      margin: 0px auto;
+    }
+
+    #pag {
+      margin-left: 10%;
+    }
+  }
+</style>
+
+<body>
+  <h4 id="ov"><img src="img/over.png">overflow</h4>
+  <div id="firm">
+    <div class="fir">
+      <div id="ted">
+        <img src="img/noted.png" style="height: 105%;">
+      </div>
+      <div id="trf">
+        <h1 id="rf">Forgot Password</h1>
+        <p id="rf">Please enter the email address you used to sign up and we’ll send you a password reset link</p>
+        <form id="form">
+          <label for="type" id="email">Email</label><br><br>
+          <input type="text" id="emailfield" onkeyup="validateEmail()"><br><br>
+          <span style="color: red;" id="emailerror"></span>
+          <button type="submit">send</button>
+          <p id="gol">Back to <span id="blu">sign in</span> </p>
+        </form>
+      </div>
+
+
+    </div>
+    <img src="img/double.webp" style=" margin-left:  90%;" id="doub">
+  </div><br><br>
+
+  <nav aria-label="Page navigation example" id="pag">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="flipboard.html">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="index.html">1</a></li>
+      <li class="page-item"><a class="page-link" href="uber.html">2</a></li>
+      <li class="page-item"><a class="page-link" href="flipboard.html">3</a></li>
+      <li class="page-item"><a class="page-link" href="overflow.html">4</a></li>
+      <li class="page-item"><a class="page-link" href="adrol.html">5</a></li>
+      <li class="page-item"><a class="page-link" href="teampassword.html">6</a></li>
+      <li class="page-item"><a class="page-link" href="rockett.html">7</a></li>
+      <li class="page-item"><a class="page-link" href="cloud.html">8</a></li>
+      <li class="page-item"><a class="page-link" href="adrol.html">Next</a></li>
+    </ul>
+  </nav>
+  <script>
+
+
+
+    let emailfield = document.getElementById('emailfield');
+    let form = document.getElementById('form');
+    let emailerror = document.getElementById('emailerror');
+    let email = document.getElementById('email');
+
+    let emailcheck = /^\w+@[a-z]+\.[a-z]{2,3}$/;
+
+    form.addEventListener('submit', (e) => {
+      if (!emailfield.value.match(emailcheck)) {
+        e.preventDefault();
+        emailerror.innerHTML = "Valid Email is required";
+        return false;
+      }
+      else {
+        emailerror.innerHTML = "";
+        return true;
+      }
+
+    })
+
+
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

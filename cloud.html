@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+  #top,
+  a {
+    color: black;
+    text-decoration: none;
+    margin: 1%;
+    display: flex;
+
+  }
+
+  #top {
+    width: 100%;
+    position: relative;
+  }
+
+
+
+  #vol {
+    text-align: center;
+  }
+
+  #lrn {
+    background-color: #F6821F;
+    border: none;
+    border-radius: 7px;
+    padding: 5px;
+    width: 10%;
+
+  }
+
+  #cont {
+    background-color: #F6821F;
+    border: none;
+    padding: 7px;
+    width: 15%;
+    border-radius: 7px;
+    text-align: center;
+    margin-left: 40%;
+  }
+
+  #gen {
+    text-align: center;
+    margin-top: 7%;
+    font-size: 35px;
+  }
+
+  #igo {
+    margin-left: 3%;
+  }
+
+  #jam {
+    border: 2px solid #F6821F;
+    width: fit-content;
+    margin: auto;
+  }
+
+  #in {
+    border: none;
+    background-color: #F6821F;
+    border-radius: 7px;
+    width: 15%;
+    padding: 5px;
+  }
+
+  #sam {
+    margin-top: 3%;
+    display: flex;
+    margin-left: 30%;
+  }
+
+  #sel {
+    background-color: #F6821F;
+    padding: 7px;
+    width: 15%;
+    border: none;
+    border-radius: 7px;
+    text-align: center;
+    margin-left: 43%;
+  }
+
+  #fra {
+    background-color: #FD922F;
+    margin-top: 6%;
+    width: 100%;
+    padding: 7%;
+  }
+
+  #gil {
+    background-color: #FFFFFF;
+    border-radius: 0%;
+    padding: 10%;
+    text-align: center;
+  }
+
+  #toc {
+    border: none;
+    background-color: #F6821F;
+    padding: 5px;
+    border-radius: 5%;
+  }
+
+  #bal,
+  li {
+    list-style-type: none;
+
+  }
+
+  li {
+    opacity: 0.5;
+  }
+
+  #bab {
+    margin-top: 0%;
+    background-color: #070033;
+    color: white;
+    padding: 6%;
+  }
+
+  #com {
+    display: flex;
+  }
+
+  #loe {
+    width: 7%;
+    border-radius: 5px 5px 5px 5px;
+    background-color: red;
+    margin-top: 1%;
+    border: none;
+
+    margin-left: 1%;
+    width: 10%;
+    padding: 0%;
+  }
+
+  #user {
+    text-align: center;
+    margin-top: 5%;
+  }
+
+  @media screen and (max-width:768px) {
+    body {
+      overflow-x: hidden;
+    }
+
+    #wel {
+      width: 50%;
+      margin-bottom: 5%;
+    }
+
+    #top {
+      display: none;
+    }
+
+    #yol {
+      display: none;
+    }
+
+    #lrn {
+      width: 40%;
+    }
+
+    #user {
+
+      width: 90%;
+      margin-left: -5%;
+    }
+
+    #wese {
+      display: none;
+    }
+  }
+</style>
+
+<body>
+  <div id="com">
+    <img src="img/cloudfare.png" id="wel">
+    <a href="#" style="margin-left: 60%;" id="yol">
+      Sales: +44 20 3514 6970
+    </a>
+    <a href="#" style="margin-left: 0%;" id="yol"> Support </a>
+
+
+  </div>
+  <div id="top">
+    <a href="#">Solution</a>
+    <a href="#">Product</a>
+    <a href="#">Pricing</a>
+    <a href="#">Pathner</a>
+    <a href="#">why cloud flare</a>
+    <a href="#" style="margin-left: 40%;">sign up</a>
+    <button
+      style=" border: none; background-color: red; border-radius: 5px 5px 5px 5px; margin-left: 1%;width: 7%; ">Under
+      attack</button>
+    <button id="loe">Login</button>
+  </div>
+
+  <div id="vol">
+    <h1> Discover the connectivity cloud</h1>
+    <p>Regain control while connecting and protecting<br> your people, apps and data everywhere.</p>
+    <button id="lrn">Learn more</button>
+  </div>
+
+  <div class="container" style="margin-top: 5%;">
+    <div class="row">
+      <div class="col-md-9">
+        <h5><img src="img/smally.png">control</h5><br>
+        <p>Regain visibility and control of IT and <br>security across on-prem, public cloud,<br> SaaS, and the Internet
+        </p>
+      </div>
+      <div class="col-md-3" id="dec">
+        <h5><img src="img/mak.png">Security</h5><br>
+        <P>Improve security and resilience while<br> reducing your attack surface, vendor<br> count, and tool sprawl</P>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="user">
+    <img src="img/conectivity.png" id="user">
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <h5><img src="img/speed.png"> Speed</h5>
+        <p>Accelerate application and network<br> performance while rapidly<br> developing new applications</p>
+      </div>
+
+      <div class="col-md-3">
+        <h5><i class="fa-solid fa-arrow-down" style="color: #F6821F;"></i> Cost</h5>
+        <p>Reduce cost and complexity to<br> reinvest resources in your highest<br> priorities</p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <button id="cont">Contact sales</button>
+  </div><br><br>
+  <div id="jam">
+    <h5 id="gen">Powered by an intelligent global network, our <br>connectivity cloud is a unified platform that helps
+      your<br> business work, deliver, and innovate everywhere.</h5>
+    <div id="igo" class="container" style="margin-top: 5%;">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="img/person - Copy.png"><br><br>
+          <h6 style="color: #F6821F;">SASE and SSE services</h6>
+          <p>Connect and secure your employees, contractors,<br> devices, networks, apps, and data everywhere<br> they
+            live.</p><br><br>
+          <p style="color: black;">Explore SASE / SSE</p>
+        </div>
+        <div class="col-md-4">
+          <img src="img/mark.png"><br><br>
+          <h6 style="color: #F6821F;">App and infrastructure services</h6>
+          <p>Give your digital products and services top-notch<br> security, reliability, and performance for<br>
+            customers everywhere.</p><br><br>
+          <p style="color: black;">Explore apps Explore infrastructure</p>
+        </div>
+        <div class="col-md-4">
+          <img src="img/attack.png"><br><br>
+          <h6 style="color: #F6821F;">Developer services</h6>
+          <p>Easily build and deploy full-stack applications everywhere,<br> thanks to integrated compute,<br> storage,
+            and networking.</p><br>
+          <p>Explore developer services</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="sam">
+    <p>Want to speak with an expert?</p>
+    <button id="in">Get in Touch</button>
+  </div>
+
+
+  <div class="container" style="margin-top: 5%;">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="img/control.png">
+      </div>
+      <div class="col-md-6" style="font-size: 15px;">
+        <h1>Recent findings: IT and security teams are experiencing a loss of control</h1>
+        <p>In a commissioned study conducted by Forrester Consulting on behalf of Cloudflare, the<br> research firm
+          found that loss of control leads to consequential impacts on customer<br> experience, employee productivity,
+          time to market, and more.</p><br>
+
+        <a href="#" style="color: black;">view the study</a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div style="text-align: center; margin-top: 5%;">
+    <h2>What analysts say</h2>
+    <div class="container" style="margin-top: 5%;">
+      <div class="row">
+        <div class="col-md-5">
+          <h1>Gartner </h1>
+          <h5>A Leader in Gartner® Magic Quadrant™ for Web Application and API Protection</h5>
+          <p>Gartner has recognized Cloudflare as a Leader in the 2022 "Gartner® Magic Quadrant™ for Web Application and
+            API Protection (WAAP)" report that evaluated 11 vendors for their ‘ability to execute’ and ‘completeness of
+            vision’</p>
+
+          <p style="color: black; font-weight: bold;">Read the report</p>
+
+        </div>
+        <div class="col-md-3">
+          <h1>
+            Forrester
+          </h1>
+          <h5>Cloudflare a Leader in 2023 Forrester Wave™: Enterprise Email Security</h5>
+          <p>Cloudflare tied for the top score in the strategy category, and received the highest scores possible in the
+            criteria of vision and innovation.</p>
+          <p style="color: black; font-weight: bold;">Read the report</p>
+
+        </div>
+        <div class="col-md-4">
+          <h1>IDC </h1>
+          <h4>Cloudflare a Leader in 2023 IDC MarketScape: Zero Trust Network Access</h4>
+          <p>IDC cites Cloudflare's "aggressive product strategy to support enterprise security needs."</p>
+          <p style="color: black; font-weight: bold;">Read the report</p>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="text-align: center; margin-top: 5%;">
+    <h2>30% of the Fortune 1000 rely on Cloudflare</h2>
+
+    <img src="img/garmin.png" id="wese">
+  </div>
+
+  <div style="margin-top: 5%;">
+
+
+    <div class="container">
+      <h3>See how leading enterprises regain control with Cloudflare </h3>
+      <div class="row" style="margin-top: 5%;">
+        <div class="col-md-5">
+          <h4>Genuine parts company</h4><br>
+          <p>Cloudflare’s connectivity cloud protects 900+ GPC<br> websites, giving them complete visibility into
+            threats<br> across their entire digital footprint.</p>
+
+          <p style="color: black; font-weight: bold;">Read case study</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Polestar</h4>
+          <p>Cloudflare’s connectivity cloud powers Polestar’s global ecommerce and development operations, giving them
+            resilience during launches and promotions</p>
+          <p style="color: black; font-weight: bold;">Read case study</p>
+
+        </div>
+        <div class="col-md-3">
+          <h4 style="color: green;">Sage</h4>
+          <p>Sage leverages Cloudflare to improve application performance and security, enhance product development,
+            secure user data, and streamline their digital footprint.</p>
+          <p style="color: black; font-weight: bold;">Read case study</p>
+        </div>
+      </div>
+    </div>
+
+    <button id="sel">Sell all case Studies</button>
+  </div>
+
+  <div class="container" style="margin-top: 6%;">
+    <div class="row">
+      <div class="col-md-4">
+        <h1>Get started with Cloudflare</h1>
+      </div>
+      <div class="col-md-4">
+        <h4>Enterprise</h4><br>
+        <p>The world’s leading enterprises trust Cloudflare to<br> deliver speed, security and reliability everywhere.
+        </p>
+        <p style="color:  black; font-weight: bold;">Learn more </p>
+      </div>
+      <div class="col-md-4">
+        <h4>Pay-as-you-go</h4>
+        <p>Get easy, instant access to Cloudflare security,<br> and performance services.</p>
+        <p style="color:  black; font-weight: bold;">Learn more </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="fra">
+    <div id="gil">
+      <h1>Contact a Cloudflare enterprise representative</h1>
+      <button id="toc">Get in Touch</button>
+    </div>
+  </div>
+
+  <div id="bab">
+    <div class="container" id="tom">
+      <div class="row" id="bal">
+        <div class="col-md-2">
+          <h6>Getting Started</h6>
+          <li>Free plans</li><br>
+          <li>For enterprises</li><br>
+          <li>Compare plans</li><br>
+          <li>Get a recommendation</li><br>
+          <li>Request a demo</li><br>
+          <li>Contact sales</li><br>
+          <li>+44 20 3514 6970</li><br>
+        </div>
+        <div class="col-md-2">
+          <h6>Resources</h6>
+          <li>Learning center</li><br>
+          <li>Analyst reports</li><br>
+          <li>Cloudflare Radar</li><br>
+          <li>Cloudflare TV</li><br>
+          <li>Case studies</li><br>
+          <li>Webinars & white</li><br>
+          <li>papers</li><br>
+          <li>Developer docs</li><br>
+          <li>theNET</li><br>
+          <li>Blog</li><br>
+
+        </div>
+        <div class="col-md-2">
+          <h6>Solutions</h6>
+          <li>Connectivity cloud</li><br>
+          <li>SSE and SASE services</li><br>
+          <li>Application services</li><br>
+          <li>Network services</li><br>
+          <li>Developer services</li><br>
+
+
+        </div>
+        <div class="col-md-2">
+          <h6>Community</h6>
+          <li>
+            Community hub
+          </li><br>
+          <li>Project Galileo</li><br>
+          <li>Athenian Project</li><br>
+          <li>Cloudflare for</li><br>
+          <li>Campaigns</li><br>
+          <li>Critical Infrastructure</li><br>
+          <li>Defense Project</li><br>
+
+        </div>
+        <div class="col-md-2">
+          <h6>Support</h6>
+          <li>Help center</li><br>
+          <li>Cloudflare status</li><br>
+          <li>Compliance</li><br>
+          <li>GDPR</li><br>
+          <li>Trust & safety</li><br>
+        </div>
+        <div class="col-md-2">
+          <h6>Company</h6>
+          <li>About Cloudflare</li><br>
+          <li>Our team</li><br>
+          <li>Investor relations</li><br>
+          <li>Press</li><br>
+          <li>Careers
+          </li><br>
+          <li>Diversity, equity, & inclusion</li><br>
+          <li>Network map</li><br>
+          <li>Logos & press kit</li><br>
+          <li>Logos & press kit</li><br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <nav aria-label="Page navigation example" id="pag">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="rockett.html">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="index.html">1</a></li>
+      <li class="page-item"><a class="page-link" href="uber.html">2</a></li>
+      <li class="page-item"><a class="page-link" href="flipboard.html">3</a></li>
+      <li class="page-item"><a class="page-link" href="overflow.html">4</a></li>
+      <li class="page-item"><a class="page-link" href="adrol.html">5</a></li>
+      <li class="page-item"><a class="page-link" href="teampassword.html">6</a></li>
+      <li class="page-item"><a class="page-link" href="rockett.html">7</a></li>
+      <li class="page-item"><a class="page-link" href="cloud.html">8</a></li>
+      <li class="page-item"><a class="page-link" href="index.html">Next</a></li>
+    </ul>
+  </nav>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

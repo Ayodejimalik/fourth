@@ -1,0 +1,278 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<style>
+    button {
+        border: none;
+        width: 100%;
+        margin-left: 0px;
+        height: 10%;
+        border-radius: 5px 5px 5px 5px;
+    }
+
+    input {
+        width: 100%;
+        height: 50px;
+        border-radius: 5px 5px 5px 5px;
+        border-color: none;
+    }
+
+    #hol {
+        background-color: rgb(107, 129, 255);
+        padding: 70px;
+        color: white;
+        margin-left: 70px;
+        display: block;
+        min-height: 100vh;
+        align-items: center;
+    }
+
+    .mol {
+        justify-content: center;
+        margin-left: 100px;
+        font-size: 50px;
+        margin-top: 0px;
+        width: 100px;
+        margin-right: 50px;
+    }
+
+    .lar {
+        margin-left: 80px;
+    }
+
+    .hul {
+        margin-top: 50px;
+    }
+
+    .bu {
+        color: blue;
+    }
+
+    #ded {
+        margin-top: 70px;
+    }
+
+    #kol {
+        margin-bottom: 40px;
+    }
+
+    .fol {
+        margin-left: 60px;
+        margin-top: 40px;
+    }
+
+    .cav {
+        font-size: 70px;
+        text-align: center;
+        margin-left: 70px;
+    }
+
+    @media screen and (max-width: 768px) {
+
+
+        .mol {
+            visibility: hidden;
+            display: none;
+        }
+
+        input {
+            width: 80%;
+            height: 50px;
+            border-radius: 5px 5px 5px 5px;
+        }
+
+        button {
+            width: 80%;
+            height: 60px;
+        }
+
+        #hol {
+            display: none;
+        }
+
+        #ded {
+            margin-left: 50px;
+        }
+
+        .pap {
+            margin-left: -5px;
+        }
+
+        .cav {
+            font-size: 30px;
+        }
+
+        #kol {
+            margin-left: -8px;
+        }
+
+        .main {
+            overflow-x: hidden;
+
+        }
+
+    }
+
+    #pag {
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <span class="cav"> <strong>Cavet:</strong> It Is A Student Project</span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div> -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg">
+                    <h1 class="fol"><img src="img/buffer-logo.svg"></h1>
+                    <div class="row">
+                        <div class="col-4">
+
+                        </div>
+                        <div class="col-lg-8" id="ded">
+                            <h1 class="fs-10" id="kol">Let's get your account set<br> up </h1>
+                            <form action="" id="form">
+                                <label for="text" id="email">Email</label><br>
+                                <input type="text" id="emailfield"><br><br>
+                                <span id="ans" style="color: red"></span><br>
+
+                                <label for="text">Create a password </label> <br>
+                                <input type="text" id="password"><br>
+                                <span id="Ans" style="color: red;"></span><br>
+
+
+                                <button type="submit">Sign up </button><br><br>
+                            </form>
+                            <p class="pap">By proceeding, you agree to<span class="bu">Buffer's Terms of<br>
+                                    Service</span>
+                            </p>
+                            <p class="pap"> _______________________________________________
+                            </p>
+                            <p class="pap">Already have an account? Log in instead</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4" id="hol">
+                    <h5 class="hul">“With Buffer I can build social content out as far as I want into the future but
+                        also
+                        tailor campaigns if we see certain trends within the industry.</h5>
+                    <img src="img/person.png" class="mol">
+                    <p class="lar">Justin Ozanich<br>
+
+                        Marketing Manager<br>
+
+                        Foster Coffee Company</p>
+
+
+                </div>
+            </div>
+            <script>
+
+                const emailformat = /^\w+@[a-z]+\.[a-z]{2,3}$/;
+                const passformat = /^.{8,}$/;
+                
+                let email = document.getElementById('email');
+                let emailfield = document.getElementById('emailfield')
+                let form = document.getElementById('form');
+                let ans = document.getElementById('ans');
+                let password = document.getElementById('password');
+                let Ans = document.getElementById('Ans');
+                
+                form.addEventListener('submit', (e) => {
+                    if (!emailfield.value.match(emailformat)) {
+                        e.preventDefault();
+                        ans.innerHTML = "Valid Email is required";
+                        return false;
+                    }
+                    else {
+                        ans.innerHTML = "";
+                        return true;
+                    }
+
+                })
+
+                form.addEventListener('submit', (e) => {
+                    if (!password.value.match(passformat)) {
+                        e.preventDefault();
+                        Ans.innerHTML = "Password is required and it must be eight characters";
+                        return false;
+                    }
+                    if (password.value.length < 6) {
+                        Ans.innerHTML = 'password must be longer than 6 characters';
+                        return false;
+
+                    }
+                    // if (password.value.length < 20) {
+                    //     Ans.innerHTML = 'password must be less than 20 characters';
+                    //     return false;
+
+                    // }
+                    else {
+                        Ans.innerHTML = " ✔✔✔ ";
+                        return true;
+                    }
+
+                })
+
+
+               
+            </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <nav aria-label="Page navigation example" id="pag">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="cloud.html">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="index.html">1</a></li>
+                    <li class="page-item"><a class="page-link" href="uber.html">2</a></li>
+                    <li class="page-item"><a class="page-link" href="flipboard.html">3</a></li>
+                    <li class="page-item"><a class="page-link" href="overflow.html">4</a></li>
+                    <li class="page-item"><a class="page-link" href="adrol.html">5</a></li>
+                    <li class="page-item"><a class="page-link" href="teampassword.html">6</a></li>
+                    <li class="page-item"><a class="page-link" href="rockett.html">7</a></li>
+                    <li class="page-item"><a class="page-link" href="cloud.html">8</a></li>
+                    <li class="page-item"><a class="page-link" href="uber.html">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="lime">
+        <main class="thecon">
+            <h2 class="h2d">LOAN CALCULATOR</h2>
+            <section>
+                <div style="display: grid;place-items: center;">
+                    <input type="text" id="loanamt">
+                    <select name="" id="dratio">
+                        <option value="0" selected>select duration</option>
+                        <option value="1">1 month</option>
+                        <option value="2">2 months</option>
+                        <option value="3">3 months</option>
+                        <option value="4">4 months</option>
+                        <option value="5">5 months</option>
+                        <option value="6">6 months</option>
+                        <option value="7">7 months</option>
+                        <option value="8">8 months</option>
+                        <option value="9">9 months</option>
+                        <option value="10">10 months</option>
+                        <option value="11">11 months</option>
+                        <option value="12">12 months</option>
+                    </select>
+
+
+                    <button onclick="" id="borrow">borrow</button>
+
+                </div>
+                <div style="display: grid;place-items: center;">
+                    <p id="result" style="text-align: center;">
+
+
+                    </p>
+                    <button id="Clear" onclick="" style="visibility: hidden;position: absolute;">Clear</button>
+                </div>
+
+            </section>
+        </main>
+    </div>
+    </div>
+
+
+
+
+    <script>
+
+        //loan calculator
+
+
+        let loanbtn = document.getElementById("borrow");
+        let clearbtn = document.getElementById("Clear");
+        let loanamount = document.getElementById('loanamt');
+        let loanrate = 0.15;
+        let loanduration = document.getElementById('dratio');
+        let loanoutput = document.getElementById('result');
+        loanbtn.addEventListener('click', () => {
+
+
+
+            if (!loanamount || isNaN(loanamount)) {
+                loanamount.style.outline = "1.5px solid red";
+                loanoutput.innerHTML = 'Input value(s)';
+
+            }
+            if (loanduration.value == "0") {
+                loanduration.style.outline = "1.5px solid red";
+                loanoutput.innerHTML = 'Input value(s)';
+
+            }
+            else {
+                monthlypay = loanamount.value / loanduration.value;
+                monthlyrate = (loanamount.value * loanrate) / loanduration.value;
+                monthlyreturn = Math.round(monthlypay + monthlyrate);
+                loanbtn.style.position = 'absolute';
+                loanbtn.style.visibility = 'hidden';
+                clearbtn.style.position = 'relative';
+                clearbtn.style.visibility = 'visible';
+                loanamount.style.outline = "";
+                loanduration.style.outline = "";
+
+
+                loanoutput.innerHTML = `Since you are taking up a loan of &#8358;${loanamount.value},<br> for the duration of ${loanduration.value}month(s) at the rate of 15%. <br> Your payback for the duration will be &#8358;${monthlyreturn} monthly`
+
+                loanoutput.style.position = 'relative';
+                loanoutput.style.visibility = 'visible';
+                loanamount.style.visibility = 'hidden';
+                loanamount.style.position = 'absolute';
+                loanduration.style.position = 'absolute';
+                loanduration.style.visibility = 'hidden';
+
+            }
+        })
+        clearbtn.addEventListener('click', () => {
+            loanbtn.style.position = 'relative';
+            loanbtn.style.visibility = 'visible';
+            clearbtn.style.position = 'absolute';
+            clearbtn.style.visibility = 'hidden';
+            loanoutput.style.position = 'absolute';
+            loanoutput.style.visibility = 'hidden';
+            loanamount.style.visibility = 'visible';
+            loanamount.style.position = 'relative';
+            loanduration.style.position = 'relative';
+            loanduration.style.visibility = 'visible';
+            document.getElementById('dratio').value = "0";
+            document.getElementById('loanamt').value = "";
+
+        })
+
+
+
+        //loan calculator
+
+
+        let btn = document.getElementById("calcu");
+        let back = document.getElementById("back");
+        let Amount = document.getElementById('Amount');
+        let rate = 0.15;
+        let duration = document.getElementById('duration');
+        let result = document.getElementById('result');
+
+        function calcu() {
+
+            if (!Amount || isNaN(Amount)) {
+                result.innerHTML = 'Input a number';
+            }
+            if (duration == "0") {
+                result.innerHTML = 'pick a month';
+
+            }
+            else {
+                monthlypay = Amount / duration;
+                rate = (Amount * rate) / duration;
+                monthlyreturn = Math.round(Am + rate);
+                // loanbtn.style.position = 'absolute';
+                // loanbtn.style.visibility = 'hidden';
+                // clearbtn.style.position = 'relative';
+                // clearbtn.style.visibility = 'visible';
+                // loanamount.style.outline = "";
+                // loanduration.style.outline = "";
+
+
+                result.innerHTML = `Since you are taking up a loan of &#8358;${loanamount.value},<br> for the duration of ${loanduration.value}month(s) at the rate of 15%. <br> Your payback for the duration will be &#8358;${monthlyreturn} monthly`
+
+                // loanoutput.style.position = 'relative';
+                // loanoutput.style.visibility = 'visible';
+                // loanamount.style.visibility = 'hidden';
+                // loanamount.style.position = 'absolute';
+                // loanduration.style.position = 'absolute';
+                // loanduration.style.visibility = 'hidden';
+
+            }
+        }
+
+        clearbtn.addEventListener('click', () => {
+            loanbtn.style.position = 'relative';
+            loanbtn.style.visibility = 'visible';
+            clearbtn.style.position = 'absolute';
+            clearbtn.style.visibility = 'hidden';
+            loanoutput.style.position = 'absolute';
+            loanoutput.style.visibility = 'hidden';
+            loanamount.style.visibility = 'visible';
+            loanamount.style.position = 'relative';
+            loanduration.style.position = 'relative';
+            loanduration.style.visibility = 'visible';
+            document.getElementById('dratio').value = "0";
+            document.getElementById('loanamt').value = "";
+
+        })
+
+         // let name = document.getElementById('email');
+                // let password = document.getElementById('password');
+                // let form = document.getElementById('form')
+                // let errorElement = document.getElementById('error')
+
+
+
+
+
+                // document.getElementById('form').addEventListener('submit', (e) => {
+                //     let messages = []
+                //     if (email.value === '' || email.value == null) {
+                //         messages.push('Email is required');
+                //     }
+
+                //     if (password.value.length <= 6) {
+                //         messages.push('password must be longer than 6 characters')
+
+                //     }
+                //     if (password.value.length <= 20) {
+                //         messages.push('password must be less than 20 characters')
+
+                //     }
+                //     if (password === 'password') {
+                //         messages.push('password can not be password')
+                //     }
+
+
+                //     if (messages.length > 0) {
+                //         emailvalidate();
+                //         passwordvalidate();
+                //         e.preventDefault();
+                //         errorElement.innerText = messages.join(' ,')
+                //     }
+                // })
+
+
+
+
+
+
+
+
+
+
+
+
+                // let email = document.getElementById('email');
+                // let pass = document.getElementById('pass');
+
+
+                // let ans = document.getElementById('ans');
+                // let Ans = document.getElementById('ans2');
+
+
+                // let answer;
+
+
+                // function emailvalidate() {
+                //     if (!email.value.match(emailformat) || !email.value) {
+                //         ans.innerHTML = '✔✔✔';
+                //         answer = false;
+                //     }
+                //     else {
+                //        ans.innerHTML ='✔';
+                //     }
+                // }
+
+                // function passwordvalidate() {
+                //     if (!pass.value.match(passformat)) {
+                //         Ans.innerHTML = 'input a password';
+                //         answer = false;
+                //     }
+                //     else {
+                //         Ans.innerHTML = 'correct';
+                //     }
+                // }
+                // document.getElementById('forn').addEventListener('submit', (jay) => {
+                //     emailvalidate();
+                //     passwordvalidate();
+                //     answer = true;
+                //     if (answer == false) {
+                //         jay.preventDefault();
+                //     }
+
+
+
+                // })
+
+    </script>
+
+
+    <div class="lime">
+        <div class="thecon">
+            <h2 class="h2d">LOAN CALCULATOR</h2>
+            <div>
+                <div>
+                    <input type="text" id="Amount"><br><br>
+                    <select name="" id="duration">
+                        <option value="0">select duration</option>
+                        <option value="1">1 month</option>
+                        <option value="2">2 months</option>
+                        <option value="3">3 months</option>
+                        <option value="4">4 months</option>
+                        <option value="5">5 months</option>
+                        <option value="6">6 months</option>
+                        <option value="7">7 months</option>
+                        <option value="8">8 months</option>
+                        <option value="9">9 months</option>
+                        <option value="10">10 months</option>
+                        <option value="11">11 months</option>
+                        <option value="12">12 months</option>
+                    </select><br>
+
+
+                    <button onclick="calcu()" id="calcu">borrow</button>
+
+                </div>
+                <div style="display: grid;place-items: center;">
+                    <p id="result" style="text-align: center;">
+
+
+                    </p>
+                    <button id="back" onclick="" style="visibility: hidden;position: absolute;">Clear</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>

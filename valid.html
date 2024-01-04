@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="error"></div>
+<form action="" method="get" id="form">
+
+    <div>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required>
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+    </div>
+    <button type="submit">Submit</button>
+                <!-- <form action="" id="myform">
+                <div class="mol">
+                    <div class="input-group mb-0 border-bottom border-1 lk" style="border: none;">
+                        <span class="input-group-text border-0  p-3" id="basic-addon1"
+                            style="background: white; ">Name</span>
+                        <input type="text" class="form-control border-0 rounded-0 p-3" aria-label="Username"
+                            aria-describedby="basic-addon1" id="inputname" oninput="namevalidate()">
+                        <span class="input-group-text border-0  p-3" id="basic-addon1" style="background: white; "><img
+                                src="" alt="" id="namemes" width="25"></span>
+
+
+                    </div>
+                    <div class="input-group mb-0 border-bottom border-1" style="border: none;">
+                        <span class="input-group-text border-0  p-3" id="basic-addon1"
+                            style="background: white;">Company</span>
+                        <input type="text" class="form-control border-0 rounded-0 p-3" aria-label="Username"
+                            aria-describedby="basic-addon1" id="inputcom" oninput="compvalidate()">
+                        <span class="input-group-text border-0  p-3" id="basic-addon1" style="background: white; "><img
+                                src="" alt="" id="compmes" width="25"></span>
+
+                    </div>
+                     <div class="input-group mb-0 border-bottom border-1" style="border: none;">
+                        <span class="input-group-text border-0 rounded-0 p-3" id="basic-addon1"
+                            style="background: white;">Email</span>
+                        <input type="text" class="form-control border-0 rounded-0 p-3" aria-label="Username"
+                            aria-describedby="basic-addon1" id="inputemail" oninput="emailvalidate()">
+                        <span class="input-group-text border-0 rounded-0 p-3" id="basic-addon1"
+                            style="background: white;"><img src="" alt="" id="emames" width="25"></span>
+
+                    </div> 
+                    <div class="input-group mb-0 border-bottom border-1" style="border: none;">
+                        <span class="input-group-text border-0 rounded-0 p-3" id="basic-addon1"
+                            style="background: white;">Password</span>
+                        <input type="text" class="form-control border-0 rounded-0 p-3" aria-label="Username"
+                            aria-describedby="basic-addon1" id="inputpass" oninput="passvalidate()">
+                        <span class="input-group-text border-0 rounded-0 p-3" id="basic-addon1"
+                            style="background: white;"><img src="" alt="" id="passmes" width="25"></span>
+
+                    </div>
+                </div>
+
+
+                <button class="mt-4 p-2 w-100 border-0 rounded-3" type="submit">Create Account</button>
+            </form>
+            -->
+</form>
+<script>
+     const name =document.getElementById('name');
+     const password = document.getElementById('password');
+     const form = document.getElementById('form')
+    const errorElement = document.getElementById('error')
+
+
+     document.getElementById('form').addEventListener('submit',(e)=> {
+        let messages = []
+        if(name.value === '' || name.value == isNaN){
+            alert(`name is required`);
+        }
+
+        if(password.value.length <= 6){
+            messages.push(`password must be longer than 6 characters`)
+              
+        }
+        if(password.value.length <= 20 ){
+            messages.push('And must be less than 20 characters')
+              
+        }
+        if(password === 'password'){
+            messages.push('password can not be password')
+        }
+        
+
+        if(messages.length > 0){ 
+        e.preventDefault()
+        errorElement.innerText = messages.join(' ,')
+        }
+     })
+
+     
+
+                // let nameinp = document.getElementById('inputname');
+                // let cominp = document.getElementById('inputcom');
+                // let emailinp = document.getElementById('inputemail');
+                // let passinp = document.getElementById('inputpass');
+
+                // let namemess = document.getElementById('namemes');
+                // let compmes = document.getElementById('compmes');
+                // let emailmes = document.getElementById('emames');
+                // let passmes = document.getElementById('passmes');
+
+                // let process;
+
+                // function namevalidate() {
+                //     if (!nameinp.value) {
+                //         namemess.src = 'wrongthin.jpg';
+                //         process = false;
+                //     } else if (!nameinp.value.match(nameformat) || nameinp.value.length < 3 || nameinp.value.length > 15) {
+                //         namemess.src = 'wrongthin.jpg';
+                //         process = false;
+                //     } else {
+                //         namemess.src = 'thin-green-check.svg';
+
+                // //     }
+                // // }
+
+                // function compvalidate() {
+                //     if (!cominp.value.match(nameformat) || !cominp.value) {
+                //         compmes.src = 'wrongthin.jpg';
+                //         process = false;
+                //     }
+                //     else {
+                //         compmes.src = 'thin-green-check.svg';
+
+                //     }
+                // }
+                // function emailvalidate() {
+                //     if (!emailinp.value.match(emailformat) || !emailinp.value) {
+                //         emailmes.src = 'wrongthin.jpg';
+                //         process = false;
+                //     }
+                //     else {
+                //         emailmes.src = 'thin-green-check.svg';
+
+                //     }
+                // }
+                // function passvalidate() {
+                //     if (!passinp.value.match(passformat)) {
+                //         passmes.src = 'wrongthin.jpg';
+                //         process = false;
+                //     }
+                //     else {
+                //         passmes.src = 'thin-green-check.svg';
+
+
+                //     }
+                // }
+
+                // document.getElementById('myform').addEventListener('submit', (loall) => {
+                //     process = true;
+                //     namevalidate();
+                //     compvalidate();
+                //     emailvalidate();
+                //     passvalidate();
+                //     if (process == false) {
+                //         loall.preventDefault();
+                //     }
+
+
+
+                // })
+</script>
+</body>
+
+</html>
