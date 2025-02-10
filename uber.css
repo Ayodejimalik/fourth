@@ -145,10 +145,9 @@ input {
     justify-content: space-between;
 }
 #ajax{
-    border: none ;
+    border: none;
     padding: 30px;
     width: 700%;
-  
 }
 
 #tal{
